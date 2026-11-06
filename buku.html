@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nijbook</title>
+  <!-- FontAwesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR STICKY -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-book-open"></i> <span>Nijbook</span>
+      </div>
+      <div class="nav-links">
+        <a href="#" class="nav-item active">Beranda</a>
+        <a href="#categories" class="nav-item">Kategori</a>
+        <a href="#popular-books" class="nav-item">Buku</a>
+        <a href="about.php">About Us</a>
+        <a href="#" class="nav-item">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+
+    <!-- 1. SECTION KATEGORI -->
+    <div class="container section" id="categories">
+      <div class="categories-header">
+        <h2 class="categories-title">Explore Categories</h2>
+        <a href="#" class="see-all-link">Lihat Semua &rarr;</a>
+      </div>
+
+      <div class="categories-container">
+        <div class="category-card card-blue">
+          <i class="fa-solid fa-user-graduate card-icon"></i>
+          <h3 class="card-title">Teen & Young Adult</h3>
+          <span class="card-count">1.245 Buku</span>
+        </div>
+        <div class="category-card card-yellow">
+          <i class="fa-solid fa-book-open-reader card-icon"></i>
+          <h3 class="card-title">Adult Fiction</h3>
+          <span class="card-count">923 Buku</span>
+        </div>
+        <div class="category-card card-green">
+          <i class="fa-solid fa-seedling card-icon"></i>
+          <h3 class="card-title">Motivation & Self-Help</h3>
+          <span class="card-count">1.103 Buku</span>
+        </div>
+        <div class="category-card card-purple">
+          <i class="fa-solid fa-chart-line card-icon"></i>
+          <h3 class="card-title">Business & Investing</h3>
+          <span class="card-count">876 Buku</span>
+        </div>
+        <div class="category-card card-pink">
+          <i class="fa-solid fa-heart card-icon"></i>
+          <h3 class="card-title">Romance</h3>
+          <span class="card-count">654 Buku</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. SECTION POPULAR BOOKS -->
+    <div class="container section" id="popular-books">
+      <div class="section-header">
+        <h2 class="section-title">Popular Books</h2>
+      </div>
+
+      <!-- Filter Kategori Buku -->
+      <div class="filter-wrapper">
+        <div class="filter-tabs">
+          <button class="tab-btn active">Semua</button>
+          <button class="tab-btn">Fiksi</button>
+          <button class="tab-btn">Non-Fiksi</button>
+          <button class="tab-btn">Fantasi</button>
+          <button class="tab-btn">Bisnis</button>
+          <button class="tab-btn">Pengembangan Diri</button>
+          <button class="tab-btn">Romance</button>
+        </div>
+      </div>
+
+      <!-- Grid Kartu Buku -->
+      <div class="books-grid" id="booksGrid">
+
+        <div class="book-card" data-title="Laut bercerita">
+          <span class="tag tag-red">Bestseller</span>
+          <img src="image/laut bercerita.jpg" alt="Laut bercerita">
+          <div class="book-card-body">
+            <h3>Laut bercerita</h3>
+            <p class="author">Leila S. Chudori</p>
+            <div class="stars"><i class="fa-solid fa-star"></i> <span>(4.8)</span></div>
+            <div class="card-footer">
+              <span class="price">Rp99.000</span>
+              <button class="heart-icon"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-title="Cantik Itu luka">
+          <span class="tag tag-emerald">Baru</span>
+          <img src="image/cantik itu luka.jpg" alt="Cantik Itu luka">
+          <div class="book-card-body">
+            <h3>Cantik Itu luka</h3>
+            <p class="author">Eka Kurniawan</p>
+            <div class="stars"><i class="fa-solid fa-star"></i> <span>(4.0)</span></div>
+            <div class="card-footer">
+              <span class="price">Rp100.000</span>
+              <button class="heart-icon"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-title="seporsi Mie Ayam Sebelum Mati">
+          <img src="image/seporsi mie ayam sebelum.jpg" alt="seporsi Mie Ayam Sebelum Mati">
+          <div class="book-card-body">
+            <h3>seporsi Mie Ayam Sebelum Mati</h3>
+            <p class="author">Brian Khrisna</p>
+            <div class="stars"><i class="fa-solid fa-star"></i> <span>(4.8)</span></div>
+            <div class="card-footer">
+              <span class="price">Rp74.000</span>
+              <button class="heart-icon"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-title="Sisi Tergelap Surga">
+          <img src="image/sisi tergelap surga.jpg" alt="Sisi Tergelap Surga">
+          <div class="book-card-body">
+            <h3>Sisi Tergelap Surga</h3>
+            <p class="author">Brian Khrisna</p>
+            <div class="stars"><i class="fa-solid fa-star"></i> <span>(4.8)</span></div>
+            <div class="card-footer">
+              <span class="price">Rp79.200</span>
+              <button class="heart-icon"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-title="Pulang">
+          <img src="image/pulang.jpg" alt="Pulang">
+          <div class="book-card-body">
+            <h3>Pulang</h3>
+            <p class="author">Leila S. Chudori</p>
+            <div class="stars"><i class="fa-solid fa-star"></i> <span>(5.0)</span></div>
+            <div class="card-footer">
+              <span class="price">Rp104.000</span>
+              <button class="heart-icon"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-title="Yang Telah Lama Pergi">
+          <img src="image/yang telah lama pergi.jpg" alt="Yang Telah Lama Pergi">
+          <div class="book-card-body">
+            <h3>Yang Telah Lama Pergi</h3>
+            <p class="author">Tere Liye</p>
+            <div class="stars"><i class="fa-solid fa-star"></i> <span>(4.9)</span></div>
+            <div class="card-footer">
+              <span class="price">Rp94.500</span>
+              <button class="heart-icon"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-title="Teka Teki Rumah Aneh">
+          <img src="image/teka teki rumah aneh.jpg" alt="Teka Teki Rumah Aneh">
+          <div class="book-card-body">
+            <h3>Teka Teki Rumah Aneh</h3>
+            <p class="author">Uketsu</p>
+            <div class="stars"><i class="fa-solid fa-star"></i> <span>(4.5)</span></div>
+            <div class="card-footer">
+              <span class="price">Rp105.825</span>
+              <button class="heart-icon"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-title="Tentang Kamu">
+          <img src="image/tentang kamu.avif" alt="Tentang Kamu">
+          <div class="book-card-body">
+            <h3>Tentang Kamu</h3>
+            <p class="author">Tere Liye</p>
+            <div class="stars"><i class="fa-solid fa-star"></i> <span>(5.0)</span></div>
+            <div class="card-footer">
+              <span class="price">Rp98.100</span>
+              <button class="heart-icon"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- Penutup books-grid -->
+    </div> <!-- Penutup popular-books -->
+
+  </main>
+
+  <script src="home.js"></script>
+</body>
+</html>

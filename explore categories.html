@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Categories - Pop-up Buku</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Explore Categories</h2>
+    </div>
+
+    <!-- Pilihan Kategori -->
+    <div class="categories-grid">
+      <div class="category-card cat-blue" data-category="teen">
+        <i data-lucide="book-open"></i>
+        <h3>Teen & Young Adult</h3>
+        <span>1.245 Buku</span>
+      </div>
+
+      <div class="category-card cat-yellow" data-category="adult">
+        <i data-lucide="trending-up"></i>
+        <h3>Adult Fiction</h3>
+        <span>923 Buku</span>
+      </div>
+
+      <div class="category-card cat-green" data-category="selfhelp">
+        <i data-lucide="sprout"></i>
+        <h3>Motivation & Self-Help</h3>
+        <span>1.103 Buku</span>
+      </div>
+
+      <div class="category-card cat-purple" data-category="business">
+        <i data-lucide="sparkles"></i>
+        <h3>Business & Investing</h3>
+        <span>876 Buku</span>
+      </div>
+
+      <div class="category-card cat-pink" data-category="romance">
+        <i data-lucide="smile"></i>
+        <h3>Romance</h3>
+        <span>654 Buku</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Pop-up Daftar Buku -->
+  <div id="bookModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-category-title">Kategori Buku</h3>
+        <button class="close-btn" id="closeModal">&times;</button>
+      </div>
+      <div class="books-grid" id="modal-books-container">
+        <!-- Buku akan dimasukkan otomatis lewat JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

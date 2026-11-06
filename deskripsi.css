@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* 1. TOP ANNOUNCEMENT BANNER */
+.top-banner {
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.82rem;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.btn-top-banner {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.close-banner {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* 2. NAVBAR */
+.navbar-wrapper {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #1d4ed8;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.nav-links a.active, .nav-links a:hover {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.search-box {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 9px 40px 9px 16px;
+  border-radius: 20px;
+  border: 1px solid #f1f5f9;
+  background: #f1f5f9;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.search-box button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-icons a {
+  color: #475569;
+  font-size: 1.15rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3. MAIN CONTENT */
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.breadcrumb a {
+  color: #64748b;
+  text-decoration: none;
+}
+
+.breadcrumb i {
+  font-size: 0.65rem;
+  color: #cbd5e1;
+}
+
+.breadcrumb .current {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* PRODUCT CARD (LAYOUT 3 KOLOM) */
+.product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 320px 1fr 1fr;
+  gap: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+}
+
+/* KOLOM 1: COVER BUKU */
+.col-cover {
+  position: relative;
+}
+
+.cover-wrapper {
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 16px;
+  position: relative;
+  border: 1px solid #f1f5f9;
+}
+
+.badge-bestseller {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.cover-wrapper img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* KOLOM 2: INFORMASI BUKU & TOMBOL AKSI */
+.category-link {
+  color: #2563eb;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.book-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 6px 0 4px;
+}
+
+.author-name {
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 0.88rem;
+}
+
+.score {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #0f172a;
+}
+
+.reviews {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.price-current {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.price-old {
+  color: #94a3b8;
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+.badge-discount {
+  background: #fee2e2;
+  color: #ef4444;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.stock-info {
+  color: #16a34a;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.action-row {
+  margin-bottom: 16px;
+}
+
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.qty-control button {
+  width: 36px;
+  height: 36px;
+  background: #f8fafc;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #334155;
+}
+
+.qty-control input {
+  width: 44px;
+  text-align: center;
+  border: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.btn {
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-cart {
+  background: #ffffff;
+  border: 1.5px solid #2563eb;
+  color: #2563eb;
+}
+
+.btn-buy {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-wishlist {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
+  cursor: pointer;
+}
+
+/* 4 FEATURES GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-box {
+  width: 32px;
+  height: 32px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-text strong {
+  font-size: 0.78rem;
+  color: #0f172a;
+}
+
+.feature-text span {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+/* KOLOM 3: TAB & SPESIFIKASI BUKU */
+.col-tabs-spec {
+  border-left: 1px solid #f1f5f9;
+  padding-left: 32px;
+}
+
+.tab-header {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-btn.active {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #2563eb;
+}
+
+.desc-text {
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.specs-table {
+  width: 100%;
+  margin-top: 24px;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.specs-table td {
+  padding: 6px 0;
+  vertical-align: top;
+}
+
+.specs-table .label {
+  color: #64748b;
+  width: 120px;
+}
+
+.specs-table .colon {
+  width: 15px;
+  color: #94a3b8;
+}
+
+.specs-table .val {
+  color: #0f172a;
+  font-weight: 500;
+}
+
+/* 4. FOOTER GELAP */
+.footer-dark {
+  background: #030712;
+  color: #94a3b8;
+  padding: 60px 0 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.brand-col p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.footer-col p {
+  font-size: 0.85rem;
+}
+
+.footer-col p.mt {
+  margin-top: 12px;
+}
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 40px auto 0;
+  padding: 24px 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* RESPONSIF MOBILE */
+@media (max-width: 1024px) {
+  .product-card {
+    grid-template-columns: 1fr;
+  }
+  .col-tabs-spec {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 32px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

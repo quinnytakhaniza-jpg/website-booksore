@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+.checkout-header {
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px 30px;
+}
+.checkout-header a {
+    color: #2563eb;
+    font-size: 22px;
+    font-weight: 800;
+    text-decoration: none;
+}
+.checkout-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 24px;
+    align-items: start;
+}
+.checkout-form-card,
+.order-summary {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 26px;
+}
+.checkout-heading span {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 800;
+}
+.checkout-heading h1 {
+    margin: 7px 0;
+}
+.checkout-heading p {
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+.checkout-error {
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+.form-section-title {
+    margin: 4px 0 16px;
+    font-size: 16px;
+    color: #0f172a;
+}
+.shipping-title {
+    margin-top: 26px;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 12px 13px;
+    outline: none;
+    font: inherit;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .08);
+}
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+.shipping-options {
+    display: grid;
+    gap: 11px;
+}
+.shipping-card {
+    border: 1px solid #dbe4f0;
+    border-radius: 13px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    cursor: pointer;
+    transition: .2s;
+}
+.shipping-card:hover {
+    border-color: #93c5fd;
+    background: #f8fbff;
+}
+.shipping-card:has(input:checked) {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+.shipping-card input {
+    accent-color: #2563eb;
+}
+.shipping-main {
+    flex: 1;
+}
+.shipping-main strong,
+.shipping-main span {
+    display: block;
+}
+.shipping-main span {
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.shipping-price {
+    color: #2563eb;
+}
+.shipping-note,
+.summary-small {
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 28px;
+}
+.form-actions a {
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 700;
+}
+.form-actions button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 20px;
+    background: #2563eb;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+.order-summary {
+    position: sticky;
+    top: 24px;
+}
+.order-summary h2 {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 13px;
+}
+.order-item span {
+    display: block;
+    color: #64748b;
+    margin-top: 4px;
+}
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 17px;
+}
+.summary-total strong {
+    color: #2563eb;
+}
+@media (max-width: 800px) {
+    .checkout-page {
+        grid-template-columns: 1fr;
+    }
+    .order-summary {
+        position: static;
+    }
+}
+@media (max-width: 560px) {
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+    .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .shipping-card {
+        align-items: flex-start;
+    }
+}
